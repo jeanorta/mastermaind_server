@@ -1,6 +1,20 @@
 
 Masterming Game Server
 
+*********************************************************************************************
+Instalación:
+1. git clone https://github.com/jeanorta/mastermaind_server.git
+
+2. cd .\mastermaind_server\
+
+3. composer install
+
+4. "Se configura el archivo .env"
+
+5. php artisan migrate
+
+*********************************************************************************************
+
 Es una api sencilla con una una tabla para crear y jugar este juego.
 
 para obtener la lista de partidas creadas se envia una peticion GET vacia a la dirección del servidor.

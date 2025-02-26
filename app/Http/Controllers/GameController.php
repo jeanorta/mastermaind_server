@@ -12,7 +12,7 @@ class GameController extends Controller
 
     public function index()
     {
-        return response()->json(Games::all(), 200);
+        return response()->json(Games::latest()->take(10)->get(), 200);
     }
 
     public function store(Request $request)
@@ -46,7 +46,7 @@ class GameController extends Controller
                     $game['status']='finalizada con victoria';
                     $game['score']= 11 - $game['round'];
                 }
-                if($suma != 8 && $game['round']==10){
+                if($suma != 8 && $game['round']==5){
                     $game['status']='finalizada con derrota';
                     $game['score']= 0;
                 }
